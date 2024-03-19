@@ -29,3 +29,15 @@ select_permissions:
         - username
       filter: {}
     comment: ""
+  - role: user
+    permission:
+      columns:
+        - email
+        - id
+        - username
+        - created_at
+        - updated_at
+      filter:
+        id:
+          _eq: X-Hasura-User-Id
+    comment: ""
